@@ -61,11 +61,23 @@ if __name__ == '__main__':
     print('線源なしの時のカウント数')
     print(result2)
 
+
     ax1 = plt.subplot(3, 1, 1)
+    ax1.set_title("gamma_counter")
+    ax1.set_xlabel("mV")
+    ax1.set_ylabel("count")
     plt.errorbar(Dx1_list, Dy1_list, xerr = result1, capsize=4, fmt='.', ecolor='red', color='black')
+
+
     ax2 = plt.subplot(3, 1, 2)
+    ax2.set_xlabel("mV")
+    ax2.set_ylabel("count")
     plt.errorbar(Dx2_list, Dy2_list, xerr = result2, capsize=4, fmt='.', ecolor='red', color='black')
+
+
     ax3 = plt.subplot(3, 1, 3)
-    plt.scatter(Dx1_list, Dy1_list, color = 'red', marker = 'o')
-    plt.scatter(Dx2_list, Dy2_list, color = 'blue', marker = 'v')
+    ax3.set_xlabel("Volt(mV)")
+    ax3.set_ylabel("count")
+    plt.scatter(Dx1_list, Dy1_list, color = 'red', marker = '.')
+    plt.scatter(Dx2_list, Dy2_list, color = 'blue', marker = '.')
     plt.show()
