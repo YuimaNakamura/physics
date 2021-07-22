@@ -62,9 +62,9 @@ if __name__ == '__main__':
     print(result2)
 
     ax1 = plt.subplot(3, 1, 1)
-    plt.scatter(Dx1_list, Dy1_list)
+    plt.errorbar(Dx1_list, Dy1_list, xerr = result1, capsize=4, fmt='.', ecolor='red', color='black')
     ax2 = plt.subplot(3, 1, 2)
-    plt.scatter(Dx2_list, Dy2_list)
+    plt.errorbar(Dx2_list, Dy2_list, xerr = result2, capsize=4, fmt='.', ecolor='red', color='black')
     ax3 = plt.subplot(3, 1, 3)
     plt.scatter(Dx1_list, Dy1_list, color = 'red', marker = 'o')
     plt.scatter(Dx2_list, Dy2_list, color = 'blue', marker = 'v')
