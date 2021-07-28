@@ -66,13 +66,13 @@ if __name__ == '__main__':
     ax1.set_title("gamma_counter")
     ax1.set_xlabel("mV")
     ax1.set_ylabel("count")
-    plt.errorbar(Dx1_list, Dy1_list, xerr = result1, capsize=4, fmt='.', ecolor='red', color='black')
+    plt.errorbar(Dx1_list, Dy1_list, yerr = result1, capsize=4, fmt='.', ecolor='red', color='black')
 
 
     ax2 = plt.subplot(3, 1, 2)
     ax2.set_xlabel("mV")
     ax2.set_ylabel("count")
-    plt.errorbar(Dx2_list, Dy2_list, xerr = result2, capsize=4, fmt='.', ecolor='red', color='black')
+    plt.errorbar(Dx2_list, Dy2_list, yerr = result2, capsize=4, fmt='.', ecolor='red', color='black')
 
 
     ax3 = plt.subplot(3, 1, 3)
